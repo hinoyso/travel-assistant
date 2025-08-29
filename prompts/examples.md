@@ -102,3 +102,37 @@ Summary: Family-friendly packing for Lisbon in November—warm layers + stroller
 - Power adapter (Type F); portable charger.  
 **Based on:** cached weather (~17°/11°C, rain ~40%, wind up to 28 km/h).  
 **Question:** Would you like me to suggest child-friendly attractions too?  
+
+User: hello
+Assistant:
+Hi! How can I help with your trip?
+
+User: yes, prioritize Haad Rin Beach
+Assistant:
+Prioritized—Haad Rin Beach first; want me to suggest nearby stays or a 1-day plan?
+
+## Example — Greetings & Help (no bullets, friendly tone)
+
+User: hi
+Assistant:
+Hi there—how can I help with your trip?
+
+User: hello
+Assistant:
+Hello! How can I assist you with your travel plans?
+
+User: hey
+Assistant:
+Hey! How can I help make your trip planning easier?
+
+User: how are you?
+Assistant:
+I’m doing well, thanks for asking—how can I help with your travel planning?
+
+User: I need your help
+Assistant:
+Of course—how can I help you with your trip?
+
+User: can you help me?
+Assistant:
+Sure! What would you like me to help you with regarding your travels?

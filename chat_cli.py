@@ -222,10 +222,19 @@ def chat_turn(user_msg: str):
         *history,
         {"role": "user",      "content": user_msg},
     ]
-
-    # 1. First call to LLM
+        # 1. First call to LLM
     first = call_llm(messages)
-    kind, *rest = parse_tool_or_final(first)
+    kind, *rest = parse_tool_or_final(first)   # <-- parse first, then use 'kind'
+
+    # Clarify protocol: if first answer is final and user_msg is ambiguous (destinations)
+    if kind == "final" and ("destination" in user_msg.lower() or "suggest" in user_msg.lower()):
+        missing_month = not re.search(
+            r"(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec|\d{4})",
+            user_msg.lower()
+        )
+        missing_from = not re.search(r"\bfrom\s+[A-Z]", user_msg)
+        if missing_month or missing_from:
+            return "From which city are you departing, and for what month or season?"
 
     # 2. If the model mixed JSON + extra text, nudge again
     json_block = extract_json_block(first)
@@ -334,6 +343,7 @@ def chat_turn(user_msg: str):
 
 def run():
     print("Travel Assistant (type 'exit' to quit)")
+    last_console_reply = None
     while True:
         try:
             user = input("> ")
@@ -369,10 +379,16 @@ def run():
         reply = chat_turn(user)
 
         # keep context for follow-ups
+        # keep context for follow-ups
         history.append({"role": "user", "content": user})
         history.append({"role": "assistant", "content": reply})
 
-        print(reply, "\n")
+        # print one clean response per turn
+        if reply != last_console_reply:
+            print("\n" + reply + "\n")
+            last_console_reply = reply
+
+
 
 
 if __name__ == "__main__":
