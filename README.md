@@ -9,17 +9,6 @@ A simple CLI-based travel assistant that uses an LLM (Ollama) + external weather
 - Graceful error handling + seasonal fallback when API fails
 - Transcript logging for demo conversations
 
-## Project Structure
-travel-assistant/
-├── chat_cli.py        # main CLI entry point
-├── prompts/
-│   ├── system.md
-│   ├── developer.md
-│   └── examples.md
-├── transcripts/       # demo transcripts (demo1.md, demo2.md, demo3.md)
-├── NOTES.md           # design notes
-├── README.md          # this file
-
 ## Setup
 Create a virtual environment and install dependencies:
 python3 -m venv .venv
