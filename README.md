@@ -41,3 +41,8 @@ This repo is structured to demonstrate:
 - Tool integration (getWeather)
 - Error handling and fallbacks
 - Maintaining conversational context
+
+## Submission Contents
+- All source code (chat_cli.py + prompts/)
+- Sample conversation transcripts (transcripts/demo1.md etc.)
+- Prompt engineering notes (NOTES.md)  

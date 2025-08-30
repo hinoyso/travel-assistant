@@ -36,6 +36,7 @@
 - geocode_failed or forecast_failed → seasonal norms (month-aware), still deliver a full packing list.  
 - Missing critical args (e.g., dates) → single clarifying question.  
 - Unknown tools → return structured error; current code only supports getWeather.
+- If requested dates are more than 16 days ahead, the assistant skips the weather tool entirely, explicitly says “I wasn’t able to get a real forecast”, and bases guidance only on seasonal norms.
 
 ## Logging & Transcripts
 - Commands:
