@@ -136,3 +136,26 @@ Of course—how can I help you with your trip?
 User: can you help me?
 Assistant:
 Sure! What would you like me to help you with regarding your travels?
+
+## Example — Far-future weather info (skip tool, seasonal overview)**
+**User:** What’s the weather in Limassol in December 2025?  
+**Assistant:**  
+**Summary:** I wasn’t able to get a real weather forecast—here’s a seasonal overview for December.  
+- Avg max ~17°C; avg min ~9°C.  
+- Rain chance ~40–50%; periodic showers likely.  
+- Winds often up to ~25 km/h.  
+- Notable pattern: mild days, cooler evenings, and wetter than summer.  
+Want packing tips for this timeframe?
+
+---
+
+## Exmple — Far-future packing (skip tool, seasonal packing)**
+**User:** What should I pack for Paris 2026-03-10 to 2026-03-14?  
+**Assistant:**  
+**Summary:** I wasn’t able to get a real weather forecast—packing guidance based on March seasonal norms.  
+- Layered tops; light sweater or fleece.  
+- Packable waterproof jacket; compact umbrella.  
+- Comfortable walking shoes; quick-dry socks.  
+- Adapter (Type E/F); power bank for long days out.  
+**Based on:** seasonal norms for March.  
+Any dressy events planned?
