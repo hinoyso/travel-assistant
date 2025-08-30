@@ -35,7 +35,7 @@
 - Treat “today” as the current date.
 - If the requested dates are **>16 days ahead**, you **MUST NOT** call the tool.
 - Instead, immediately produce the answer based **only on seasonal norms** and **explicitly say**:
-> I wasn’t able to get a real weather forecast.
+  I wasn’t able to get a real weather forecast.
 - Two cases:
 1) **Weather information question** (e.g., “What’s the weather in X then?”)  
 Output a **WEATHER OVERVIEW**:
